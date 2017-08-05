@@ -1,0 +1,45 @@
+.header {
+	width: 100%;
+	position: fixed;
+	top: 60px;
+	left: 0;
+	z-index: 999;
+	@include animacao;
+
+	&.scroll_menu {
+		background-color: rgba($verde, .95);
+		top: 0px;
+
+		h1 {
+			margin-top: 10px;
+			text-align: center;
+			
+			img {
+				max-height: 40px;
+				width: auto;
+			}
+		}
+
+		.menu-mobile {
+			margin: 5px 0;
+		}
+	}
+
+	&.active {
+		top: 80px;
+		background: none;
+
+		h1 {
+			margin-top: 0px;
+			
+			img {
+				max-height: none;
+				width: 100%;
+			}
+		}
+
+		.menu-mobile {
+			margin: 10px 0 0;
+		}
+	}
+}

@@ -1,0 +1,154 @@
+form {
+	width: 100%;
+	@include clear();
+
+	input, textarea {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	input[type='text'], input[type='email'] {
+		background-color: transparent;
+		font-size: 1.25rem; 
+		color: $cor-txt;
+		font-weight: $light;
+		line-height: 50px;
+		height: 50px;
+		border: 1px solid $cinza;
+		padding: 0 10px;
+		font-style: normal;
+		@include box-sizing;
+	}
+
+	textarea {
+		background-color: transparent;
+		padding: 10px;
+		font-size: .75rem; 
+		color: $cor-txt;
+		font-weight: $bold;
+		border: 1px solid $verde-limao;
+		border-radius: 5px;
+		height: 95px;
+		resize: vertical;
+		@include box-sizing;
+	}
+
+	fieldset {
+		span {
+			border: 2px solid #5a5758;
+			border-width: 0 0 2px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			display: block;
+		}
+		margin-top: 20px;
+	}
+
+
+	&.news {
+		position: relative;
+		max-width: 450px;
+		margin: 0 auto;
+
+		input {
+			background-color: transparent;
+			height: 63px;
+			border-color: $verde;
+			font-style: italic;
+			padding-right: 40px;
+		}
+
+		button.news {
+			background: transparent;
+			position: absolute;
+			top: 16px;
+			right: 12px;
+			width: 18px;
+			height: 29px;
+			@include animacao;
+
+			img {
+				width: 100%;
+			}
+
+			&:hover {
+				opacity: .5;
+			}
+		}
+	}
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 1px solid #4778d9!important;
+}
+
+button:not(.news), input[type='submit'], .button {
+	display: inline-block;
+	width: auto;
+	height: 45px;
+	line-height: 45px;
+	background-color: $verde;
+	color: #ffffff;
+	font-weight: $light;
+	font-size: 1.225rem; 
+	text-align: center;
+	text-transform: uppercase;
+	padding: 0 20px;
+	@include animacao;
+
+	&:hover {
+		background-color: darken($verde, 10%);
+		color: #ffffff;
+	}
+}
+
+.select {
+	overflow: hidden;
+	background-color: #e6e7e8;
+	line-height: 44px;
+	height: 40px;
+	padding: 0 0 0 10px;
+	margin-bottom: 20px;
+	display: block;
+	position: relative;
+	@include box-sizing();
+
+	select {
+		width: 88%;
+		padding-right: 135px;
+		background-color: transparent;
+		font-weight: $regular;
+		font-size: 1.125rem;
+		color: $roxo;
+		box-sizing: content-box;
+		position: relative;
+		z-index: 99;
+		cursor: pointer;
+	}
+
+	&:after {
+		content: "\f107";
+		position: absolute;
+		right: 13px;
+		top: 12px;
+		font: normal normal normal 46px/1 FontAwesome;
+		cursor: pointer;
+		height: 15px;
+		line-height: 15px;
+		z-index: 0;
+	}
+}
+
+input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder {  
+	opacity: 1;	
+}
+
+input::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+.msg-form {
+	text-align: center;
+	font-size: 1rem;
+}
