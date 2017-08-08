@@ -117,13 +117,30 @@ h3 {
 
 	&.sub-tituto-page {
 		background-color: $verde;
-		font-weight: $light;
-		color: #ffffff;
-		font-size: 3rem;
-		line-height: 100px;
+		line-height: 80px;
+		height: 80px;
+		width: 100%;
+		float: left;
 
 		img {
-			max-height: 90px;
+			max-height: 70px;
+			float: left;
+			margin-top: 5px;
+			margin-left: 40px;
+		}
+
+		span {
+			float: left;
+			font-weight: $light;
+			color: #ffffff;
+			font-size: 2rem;
+			line-height: 80px;
+			height: 80px;
+			margin-left: 20px;
+		}
+
+		&.margem {
+			margin: 50px 0;
 		}
 	}
 }
@@ -138,7 +155,11 @@ h4 {
 }
 
 h5 {
-
+	font-size: 2rem;
+	line-height: 2rem;
+	text-transform: uppercase;
+	font-weight: $regular;
+	color: $verde;
 }
 
 h6 {
@@ -191,6 +212,15 @@ p {
 			line-height: 1.5rem;
 			text-align: left;
 			max-width: 100%;
+			padding: 0 30px;
+			@include box-sizing;
+		}
+
+		&.text-content-medium {
+			font-size: 1.8rem;
+			line-height: 2rem;
+			max-width: 650px;
+			max-width: 650px;
 			padding: 0 30px;
 			@include box-sizing;
 		}
