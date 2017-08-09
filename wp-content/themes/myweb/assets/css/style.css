@@ -4126,11 +4126,20 @@ form:after {
   clear: both;
 }
 /* line 5, ../sass/style/_form.scss */
+form .obs {
+  font-size: .9rem;
+  line-height: .9rem;
+  font-style: italic;
+  font-weight: 100;
+  margin-bottom: 20px;
+  display: block;
+}
+/* line 14, ../sass/style/_form.scss */
 form input, form textarea {
   max-width: 100%;
   width: 100%;
 }
-/* line 10, ../sass/style/_form.scss */
+/* line 19, ../sass/style/_form.scss */
 form input[type='text'], form input[type='email'] {
   background-color: transparent;
   font-size: 1.25rem;
@@ -4145,40 +4154,31 @@ form input[type='text'], form input[type='email'] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 23, ../sass/style/_form.scss */
+/* line 32, ../sass/style/_form.scss */
 form textarea {
   background-color: transparent;
-  padding: 10px;
-  font-size: .75rem;
+  padding: 20px 10px;
+  font-size: 1.25rem;
   color: #6E6F71;
-  font-weight: 700;
-  border: 1px solid #b5bd00;
-  border-radius: 5px;
+  font-weight: 100;
+  border: 1px solid #E6E6E7;
   height: 95px;
   resize: vertical;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 36, ../sass/style/_form.scss */
+/* line 44, ../sass/style/_form.scss */
 form fieldset {
   margin-top: 20px;
 }
-/* line 37, ../sass/style/_form.scss */
-form fieldset span {
-  border: 2px solid #5a5758;
-  border-width: 0 0 2px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: block;
-}
-/* line 48, ../sass/style/_form.scss */
+/* line 49, ../sass/style/_form.scss */
 form.news {
   position: relative;
   max-width: 450px;
   margin: 0 auto;
 }
-/* line 53, ../sass/style/_form.scss */
+/* line 54, ../sass/style/_form.scss */
 form.news input {
   background-color: transparent;
   height: 63px;
@@ -4186,7 +4186,7 @@ form.news input {
   font-style: italic;
   padding-right: 40px;
 }
-/* line 61, ../sass/style/_form.scss */
+/* line 62, ../sass/style/_form.scss */
 form.news button.news {
   background: transparent;
   position: absolute;
@@ -4198,22 +4198,37 @@ form.news button.news {
   -webkit-transition: all 0.2s ease 0s;
   -o-transition: all 0.2s ease 0s;
 }
-/* line 70, ../sass/style/_form.scss */
+/* line 71, ../sass/style/_form.scss */
 form.news button.news img {
   width: 100%;
 }
-/* line 74, ../sass/style/_form.scss */
+/* line 75, ../sass/style/_form.scss */
 form.news button.news:hover {
   opacity: .5;
 }
+/* line 81, ../sass/style/_form.scss */
+form.form-contato {
+  clear: both;
+  margin: 30px 0 60px;
+}
+/* line 85, ../sass/style/_form.scss */
+form.form-contato input, form.form-contato textarea {
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #E6E6E7;
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #595A5C;
+}
 
 /* hover style just for information */
-/* line 82, ../sass/style/_form.scss */
+/* line 98, ../sass/style/_form.scss */
 label:hover:before {
   border: 1px solid #4778d9 !important;
 }
 
-/* line 86, ../sass/style/_form.scss */
+/* line 102, ../sass/style/_form.scss */
 button:not(.news), input[type='submit'], .button {
   display: inline-block;
   width: auto;
@@ -4230,13 +4245,40 @@ button:not(.news), input[type='submit'], .button {
   -webkit-transition: all 0.2s ease 0s;
   -o-transition: all 0.2s ease 0s;
 }
-/* line 100, ../sass/style/_form.scss */
+/* line 116, ../sass/style/_form.scss */
 button:not(.news):hover, input[type='submit']:hover, .button:hover {
   background-color: #243b3f;
   color: #ffffff;
 }
+/* line 121, ../sass/style/_form.scss */
+button:not(.news).borda, input[type='submit'].borda, .button.borda {
+  position: relative;
+  margin-top: 30px;
+}
+/* line 125, ../sass/style/_form.scss */
+button:not(.news).borda:before, input[type='submit'].borda:before, .button.borda:before {
+  content: '/ / / / / / / / / / / / / / / /';
+  display: block;
+  line-height: 40px;
+  color: #365960;
+  font-size: .8rem;
+  text-align: center;
+  font-weight: 700;
+  font-style: italic;
+  position: absolute;
+  top: -43px;
+  width: 100%;
+  left: 0;
+}
+/* line 141, ../sass/style/_form.scss */
+button:not(.news).enviar, input[type='submit'].enviar, .button.enviar {
+  margin-right: auto;
+  margin-left: auto;
+  width: 220px;
+  display: block;
+}
 
-/* line 106, ../sass/style/_form.scss */
+/* line 149, ../sass/style/_form.scss */
 .select {
   overflow: hidden;
   background-color: #e6e7e8;
@@ -4250,7 +4292,7 @@ button:not(.news):hover, input[type='submit']:hover, .button:hover {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 117, ../sass/style/_form.scss */
+/* line 160, ../sass/style/_form.scss */
 .select select {
   width: 88%;
   padding-right: 135px;
@@ -4263,7 +4305,7 @@ button:not(.news):hover, input[type='submit']:hover, .button:hover {
   z-index: 99;
   cursor: pointer;
 }
-/* line 130, ../sass/style/_form.scss */
+/* line 173, ../sass/style/_form.scss */
 .select:after {
   content: "\f107";
   position: absolute;
@@ -4276,17 +4318,17 @@ button:not(.news):hover, input[type='submit']:hover, .button:hover {
   z-index: 0;
 }
 
-/* line 143, ../sass/style/_form.scss */
+/* line 186, ../sass/style/_form.scss */
 input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder {
   opacity: 1;
 }
 
-/* line 147, ../sass/style/_form.scss */
+/* line 190, ../sass/style/_form.scss */
 input::-webkit-input-placeholder {
   opacity: 0;
 }
 
-/* line 151, ../sass/style/_form.scss */
+/* line 194, ../sass/style/_form.scss */
 .msg-form {
   text-align: center;
   font-size: 1rem;
@@ -4656,8 +4698,9 @@ input::-webkit-input-placeholder {
 /* line 17, ../sass/style/page/_home.scss */
 .grid .grid-item {
   float: left;
+  z-index: 0;
 }
-/* line 20, ../sass/style/page/_home.scss */
+/* line 21, ../sass/style/page/_home.scss */
 .grid .grid-item .img-grid {
   display: block;
   max-width: 100%;
@@ -4666,11 +4709,11 @@ input::-webkit-input-placeholder {
   -webkit-transition: all 0.2s ease 0s;
   -o-transition: all 0.2s ease 0s;
 }
-/* line 27, ../sass/style/page/_home.scss */
+/* line 28, ../sass/style/page/_home.scss */
 .grid .grid-item .item {
   position: relative;
 }
-/* line 30, ../sass/style/page/_home.scss */
+/* line 31, ../sass/style/page/_home.scss */
 .grid .grid-item .item .hover-grid {
   width: 100%;
   height: 100%;
@@ -4683,7 +4726,7 @@ input::-webkit-input-placeholder {
   -webkit-transition: all 0.2s ease 0s;
   -o-transition: all 0.2s ease 0s;
 }
-/* line 40, ../sass/style/page/_home.scss */
+/* line 41, ../sass/style/page/_home.scss */
 .grid .grid-item .item .hover-grid .cont-hover {
   font-size: 1.875rem;
   font-weight: 100;
@@ -4694,18 +4737,18 @@ input::-webkit-input-placeholder {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 51, ../sass/style/page/_home.scss */
+/* line 52, ../sass/style/page/_home.scss */
 .grid .grid-item .item .hover-grid span {
   display: block;
   color: #ffffff;
 }
-/* line 56, ../sass/style/page/_home.scss */
+/* line 57, ../sass/style/page/_home.scss */
 .grid .grid-item .item .hover-grid img {
   display: block;
   width: 100px;
   margin: 0 auto 10px;
 }
-/* line 64, ../sass/style/page/_home.scss */
+/* line 65, ../sass/style/page/_home.scss */
 .grid .grid-item a {
   -moz-transition: all 0.2s ease 0s;
   -webkit-transition: all 0.2s ease 0s;
@@ -4713,7 +4756,7 @@ input::-webkit-input-placeholder {
   display: block;
   overflow: hidden;
 }
-/* line 70, ../sass/style/page/_home.scss */
+/* line 71, ../sass/style/page/_home.scss */
 .grid .grid-item a:hover .img-grid {
   -webkit-transform: scale(1.2) rotate(-5deg);
   -moz-transform: scale(1.2) rotate(-5deg);
@@ -4721,30 +4764,30 @@ input::-webkit-input-placeholder {
   -ms-transform: scale(1.2) rotate(-5deg);
   transform: scale(1.2) rotate(-5deg);
 }
-/* line 74, ../sass/style/page/_home.scss */
+/* line 75, ../sass/style/page/_home.scss */
 .grid .grid-item a:hover .hover-grid {
   background-color: rgba(54, 89, 96, 0.6);
 }
 
-/* line 82, ../sass/style/page/_home.scss */
+/* line 83, ../sass/style/page/_home.scss */
 .ico-page {
   margin: 20px 0 50px;
   text-align: center;
 }
-/* line 86, ../sass/style/page/_home.scss */
+/* line 87, ../sass/style/page/_home.scss */
 .ico-page li {
   display: inline-block;
   padding: 0 40px;
   position: relative;
   vertical-align: top;
 }
-/* line 92, ../sass/style/page/_home.scss */
+/* line 93, ../sass/style/page/_home.scss */
 .ico-page li img {
   display: block;
   margin: 0 auto;
   max-width: 150px;
 }
-/* line 98, ../sass/style/page/_home.scss */
+/* line 99, ../sass/style/page/_home.scss */
 .ico-page li span {
   font-size: 1.225rem;
   color: #365960;
@@ -4752,7 +4795,7 @@ input::-webkit-input-placeholder {
   display: block;
   text-transform: uppercase;
 }
-/* line 106, ../sass/style/page/_home.scss */
+/* line 107, ../sass/style/page/_home.scss */
 .ico-page li:before, .ico-page li:after {
   content: '';
   width: 10px;
@@ -4763,46 +4806,46 @@ input::-webkit-input-placeholder {
   top: 50%;
   margin-top: -5px;
 }
-/* line 117, ../sass/style/page/_home.scss */
+/* line 118, ../sass/style/page/_home.scss */
 .ico-page li:before {
   left: 10px;
 }
-/* line 121, ../sass/style/page/_home.scss */
+/* line 122, ../sass/style/page/_home.scss */
 .ico-page li:after {
   right: 10px;
 }
-/* line 125, ../sass/style/page/_home.scss */
+/* line 126, ../sass/style/page/_home.scss */
 .ico-page li:first-child {
   padding-left: 0px;
 }
-/* line 128, ../sass/style/page/_home.scss */
+/* line 129, ../sass/style/page/_home.scss */
 .ico-page li:first-child:before {
   display: none;
 }
-/* line 133, ../sass/style/page/_home.scss */
+/* line 134, ../sass/style/page/_home.scss */
 .ico-page li:last-child {
   padding-right: 0px;
 }
-/* line 136, ../sass/style/page/_home.scss */
+/* line 137, ../sass/style/page/_home.scss */
 .ico-page li:last-child:after {
   display: none;
 }
-/* line 142, ../sass/style/page/_home.scss */
+/* line 143, ../sass/style/page/_home.scss */
 .ico-page.ico-page-inferior {
   margin-bottom: 0px;
 }
-/* line 146, ../sass/style/page/_home.scss */
+/* line 147, ../sass/style/page/_home.scss */
 .ico-page.ico-page-inferior li:before, .ico-page.ico-page-inferior li:after {
   display: none;
 }
 
-/* line 153, ../sass/style/page/_home.scss */
+/* line 154, ../sass/style/page/_home.scss */
 .box-msg {
   background-size: cover;
   background-repeat: none;
   background-position: center;
 }
-/* line 158, ../sass/style/page/_home.scss */
+/* line 159, ../sass/style/page/_home.scss */
 .box-msg .box-height {
   display: table;
   width: 100%;
@@ -4810,23 +4853,39 @@ input::-webkit-input-placeholder {
   line-height: 200px;
 }
 /* line 165, ../sass/style/page/_home.scss */
+.box-msg .box-height.co-found-txt {
+  height: auto;
+  line-height: auto;
+}
+/* line 169, ../sass/style/page/_home.scss */
+.box-msg .box-height.co-found-txt .box-texto {
+  padding: 150px 0;
+  background-color: rgba(54, 89, 96, 0.7);
+}
+/* line 173, ../sass/style/page/_home.scss */
+.box-msg .box-height.co-found-txt .box-texto p.texto {
+  font-size: 1.9rem;
+  line-height: 2rem;
+  font-weight: 100;
+}
+/* line 182, ../sass/style/page/_home.scss */
 .box-msg .box-texto {
   display: table-cell;
   vertical-align: middle;
   background-color: rgba(54, 89, 96, 0.9);
 }
-/* line 170, ../sass/style/page/_home.scss */
+/* line 187, ../sass/style/page/_home.scss */
 .box-msg .box-texto p {
   color: #ffffff;
   text-align: center;
   display: block;
 }
-/* line 175, ../sass/style/page/_home.scss */
+/* line 192, ../sass/style/page/_home.scss */
 .box-msg .box-texto p.texto {
   font-size: 1.5625rem;
   line-height: 1.5625rem;
 }
-/* line 180, ../sass/style/page/_home.scss */
+/* line 197, ../sass/style/page/_home.scss */
 .box-msg .box-texto p.sub-texto {
   margin-top: 5px;
   font-size: 1.225rem;
@@ -4834,17 +4893,17 @@ input::-webkit-input-placeholder {
   font-weight: 100;
 }
 
-/* line 190, ../sass/style/page/_home.scss */
+/* line 207, ../sass/style/page/_home.scss */
 .box-sobre {
   text-align: center;
 }
-/* line 193, ../sass/style/page/_home.scss */
+/* line 210, ../sass/style/page/_home.scss */
 .box-sobre .ico_cafe {
   display: block;
   width: 130px;
   margin: 0 auto 10px;
 }
-/* line 199, ../sass/style/page/_home.scss */
+/* line 216, ../sass/style/page/_home.scss */
 .box-sobre .button {
   margin: 10px auto 50px;
 }
@@ -4930,83 +4989,249 @@ input::-webkit-input-placeholder {
   font-weight: 500;
 }
 
-/* line 1, ../sass/style/page/_contato.scss */
-.img-nos {
-  display: none;
-}
-
-/* line 5, ../sass/style/page/_contato.scss */
-.equipe {
-  display: block;
-  width: 100%;
-}
-/* line 9, ../sass/style/page/_contato.scss */
-.equipe:first-child {
-  margin-top: 30px;
-}
-/* line 13, ../sass/style/page/_contato.scss */
-.equipe img {
-  width: 100%;
-  display: block;
-}
-/* line 18, ../sass/style/page/_contato.scss */
-.equipe h5, .equipe span {
-  text-transform: uppercase;
-}
-/* line 22, ../sass/style/page/_contato.scss */
-.equipe h5, .equipe span, .equipe p {
+/* line 3, ../sass/style/page/_contato.scss */
+.box-contato .sub-tituto-page span {
   text-align: center;
+  width: 100%;
+  margin: 0;
 }
-/* line 26, ../sass/style/page/_contato.scss */
-.equipe h5 {
-  margin-top: 40px;
+/* line 10, ../sass/style/page/_contato.scss */
+.box-contato .row.row-contato {
+  margin-right: -5px;
+  margin-left: -5px;
 }
-/* line 30, ../sass/style/page/_contato.scss */
-.equipe span, .equipe p {
+/* line 14, ../sass/style/page/_contato.scss */
+.box-contato .row.row-contato [class*="col-"] {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+/* line 21, ../sass/style/page/_contato.scss */
+.box-contato .item-contato .ico-nome {
+  background-color: #365960;
+  height: 80px;
+  width: 100%;
   display: block;
-  font-weight: 100;
+  line-height: 80px;
+  padding: 0 10px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 31, ../sass/style/page/_contato.scss */
+.box-contato .item-contato .ico-nome .nome-item, .box-contato .item-contato .ico-nome img {
+  display: inline-block;
 }
 /* line 35, ../sass/style/page/_contato.scss */
-.equipe span {
-  font-size: 1.125rem;
-  line-height: 1.125rem;
-  margin-top: 5px;
+.box-contato .item-contato .ico-nome img {
+  vertical-align: middle;
+  position: relative;
+  height: 67px;
 }
-/* line 41, ../sass/style/page/_contato.scss */
-.equipe p {
-  font-size: 1.125rem;
-  line-height: 1.125rem;
-  margin-top: 5px;
-  margin-bottom: 40px;
+/* line 40, ../sass/style/page/_contato.scss */
+.box-contato .item-contato .ico-nome img.ico_cliente {
+  top: -4px;
 }
-
-/* line 50, ../sass/style/page/_contato.scss */
-.box-sonhos .row .col-6 {
-  padding: 0 40px;
+/* line 44, ../sass/style/page/_contato.scss */
+.box-contato .item-contato .ico-nome img.ico_fornecedor {
+  top: -10px;
 }
-/* line 54, ../sass/style/page/_contato.scss */
-.box-sonhos .imagem-sonhos, .box-sonhos h5 {
-  margin-top: 30px;
+/* line 49, ../sass/style/page/_contato.scss */
+.box-contato .item-contato .ico-nome .nome-item {
+  font-weight: 100;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 84px;
+  height: 80px;
 }
-/* line 58, ../sass/style/page/_contato.scss */
-.box-sonhos .imagem-sonhos {
-  max-width: 100%;
+/* line 56, ../sass/style/page/_contato.scss */
+.box-contato .item-contato .ico-nome .nome-item.trabalhe {
+  line-height: 1.5rem;
+  position: relative;
+  top: 15px;
 }
-/* line 62, ../sass/style/page/_contato.scss */
-.box-sonhos h5 {
+/* line 64, ../sass/style/page/_contato.scss */
+.box-contato .item-contato h5, .box-contato .item-contato .sub-titulo, .box-contato .item-contato p {
   display: block;
   text-align: center;
-  margin-bottom: 20px;
 }
-/* line 68, ../sass/style/page/_contato.scss */
-.box-sonhos p {
-  font-size: 1.225rem;
+/* line 69, ../sass/style/page/_contato.scss */
+.box-contato .item-contato h5 {
+  font-size: 1.5rem;
+  margin-top: 30px;
   line-height: 1.5rem;
+  text-transform: uppercase;
+}
+/* line 76, ../sass/style/page/_contato.scss */
+.box-contato .item-contato .sub-titulo {
+  font-size: 1.225rem;
+  font-weight: 100;
+  line-height: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  height: 1.5rem;
+  margin-bottom: 3px;
+}
+/* line 86, ../sass/style/page/_contato.scss */
+.box-contato .item-contato p {
+  font-style: italic;
+  font-size: .9rem;
+  line-height: 1.225rem;
+}
+/* line 91, ../sass/style/page/_contato.scss */
+.box-contato .item-contato p strong, .box-contato .item-contato p span {
   display: block;
+}
+/* line 95, ../sass/style/page/_contato.scss */
+.box-contato .item-contato p span {
   font-weight: 100;
 }
-
-/* line 78, ../sass/style/page/_contato.scss */
-.ico-page li span {
+/* line 99, ../sass/style/page/_contato.scss */
+.box-contato .item-contato p strong {
   font-weight: 500;
+}
+
+/* line 106, ../sass/style/page/_contato.scss */
+.contato-maps {
+  margin: 60px 0;
+  background-size: cover;
+  background-position: center;
+}
+/* line 111, ../sass/style/page/_contato.scss */
+.contato-maps .bg-maps {
+  display: block;
+  background-color: rgba(54, 89, 96, 0.5);
+  padding: 100px 0;
+}
+/* line 117, ../sass/style/page/_contato.scss */
+.contato-maps .box-endereco {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 630px;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  padding: 30px 100px;
+}
+/* line 126, ../sass/style/page/_contato.scss */
+.contato-maps .box-endereco h5 {
+  margin: 15px 0;
+}
+/* line 130, ../sass/style/page/_contato.scss */
+.contato-maps .box-endereco p, .contato-maps .box-endereco a {
+  font-weight: 100;
+}
+/* line 134, ../sass/style/page/_contato.scss */
+.contato-maps .box-endereco p {
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  margin-bottom: 10px;
+}
+/* line 140, ../sass/style/page/_contato.scss */
+.contato-maps .box-endereco a {
+  font-size: 1.225rem;
+  line-height: 1.5rem;
+  color: #365960;
+  font-style: italic;
+}
+/* line 146, ../sass/style/page/_contato.scss */
+.contato-maps .box-endereco a:hover {
+  text-decoration: underline;
+}
+
+/* line 1, ../sass/style/page/_co-found.scss */
+.box-startups {
+  padding-bottom: 0px;
+}
+/* line 4, ../sass/style/page/_co-found.scss */
+.box-startups .ico_cafe {
+  margin-bottom: 0px;
+}
+/* line 8, ../sass/style/page/_co-found.scss */
+.box-startups h5 {
+  margin-bottom: 60px;
+}
+/* line 13, ../sass/style/page/_co-found.scss */
+.box-startups .startups .bg-color {
+  padding: 100px 0;
+  background-color: rgba(54, 89, 96, 0.3);
+}
+/* line 18, ../sass/style/page/_co-found.scss */
+.box-startups .startups img {
+  max-width: 1000px;
+  max-height: 170px;
+  margin-bottom: 20px;
+}
+/* line 24, ../sass/style/page/_co-found.scss */
+.box-startups .startups .texto {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.8rem;
+}
+
+/* line 1, ../sass/style/page/_post.scss */
+.post-list {
+  margin-top: 30px;
+}
+/* line 4, ../sass/style/page/_post.scss */
+.post-list .imagem_principal {
+  overflow: hidden;
+  width: 100%;
+  display: block;
+  background-color: #365960;
+}
+/* line 10, ../sass/style/page/_post.scss */
+.post-list .imagem_principal img {
+  width: 100%;
+  display: block;
+  -moz-transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+}
+/* line 17, ../sass/style/page/_post.scss */
+.post-list .box-content {
+  text-align: center;
+  padding: 40px 0 20px;
+  display: block;
+}
+/* line 22, ../sass/style/page/_post.scss */
+.post-list .box-content .ico_list {
+  max-width: 80px;
+}
+/* line 26, ../sass/style/page/_post.scss */
+.post-list .box-content h5 {
+  margin: 10px 0;
+  -moz-transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+}
+/* line 31, ../sass/style/page/_post.scss */
+.post-list .box-content .date, .post-list .box-content p {
+  font-weight: 100;
+  display: block;
+}
+/* line 36, ../sass/style/page/_post.scss */
+.post-list .box-content .date {
+  font-size: 1.225rem;
+  line-height: 1.225rem;
+  margin-bottom: 20px;
+}
+/* line 42, ../sass/style/page/_post.scss */
+.post-list .box-content p {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+/* line 50, ../sass/style/page/_post.scss */
+.post-list:hover .imagem_principal img {
+  opacity: .5;
+  -webkit-transform: scale(1.2) rotate(-5deg);
+  -moz-transform: scale(1.2) rotate(-5deg);
+  -o-transform: scale(1.2) rotate(-5deg);
+  -ms-transform: scale(1.2) rotate(-5deg);
+  transform: scale(1.2) rotate(-5deg);
+}
+/* line 56, ../sass/style/page/_post.scss */
+.post-list:hover h5 {
+  color: #000000;
 }

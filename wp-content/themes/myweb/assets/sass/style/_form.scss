@@ -2,6 +2,15 @@ form {
 	width: 100%;
 	@include clear();
 
+	.obs {
+		font-size: .9rem;
+		line-height: .9rem;
+		font-style: italic;
+		font-weight: $light;
+		margin-bottom: 20px;
+		display: block;
+	}
+
 	input, textarea {
 		max-width: 100%;
 		width: 100%;
@@ -22,25 +31,17 @@ form {
 
 	textarea {
 		background-color: transparent;
-		padding: 10px;
-		font-size: .75rem; 
+		padding: 20px 10px;
+		font-size: 1.25rem; 
 		color: $cor-txt;
-		font-weight: $bold;
-		border: 1px solid $verde-limao;
-		border-radius: 5px;
+		font-weight: $light;
+		border: 1px solid $cinza;
 		height: 95px;
 		resize: vertical;
 		@include box-sizing;
 	}
 
 	fieldset {
-		span {
-			border: 2px solid #5a5758;
-			border-width: 0 0 2px;
-			padding-top: 20px;
-			padding-bottom: 20px;
-			display: block;
-		}
 		margin-top: 20px;
 	}
 
@@ -76,6 +77,21 @@ form {
 			}
 		}
 	}
+
+	&.form-contato {
+		clear: both;
+		margin: 30px 0 60px;
+
+		input, textarea {
+			padding-right: 20px;
+			padding-left: 20px;
+			background-color: $cinza;
+			font-size: 1rem;
+			font-style: italic;
+			margin-bottom: 20px;
+			color: #595A5C;
+		}
+	}
 }
 
 /* hover style just for information */
@@ -100,6 +116,33 @@ button:not(.news), input[type='submit'], .button {
 	&:hover {
 		background-color: darken($verde, 10%);
 		color: #ffffff;
+	}
+
+	&.borda {
+		position: relative;
+		margin-top: 30px;
+
+		&:before {
+			content: '/ / / / / / / / / / / / / / / /';
+			display: block;
+			line-height: 40px;
+			color: $verde;
+			font-size: .8rem;
+			text-align: center;
+			font-weight: 700;
+			font-style: italic;
+			position: absolute;
+			top: -43px;
+			width: 100%;
+			left: 0;
+		}
+	}
+
+	&.enviar {
+		margin-right: auto;
+		margin-left: auto;
+		width: 220px;
+		display: block;
 	}
 }
 

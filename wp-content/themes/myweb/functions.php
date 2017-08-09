@@ -12,6 +12,8 @@ add_theme_support( 'post-thumbnails' );
 // Unable admin bar
 add_filter('show_admin_bar', '__return_false');
 
+add_post_type_support( 'post', 'excerpt' );
+
 // remove itens padrões
 add_action( 'init', 'my_custom_init' );
 function my_custom_init() {

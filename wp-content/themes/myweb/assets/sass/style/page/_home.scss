@@ -16,6 +16,7 @@
 
 	.grid-item {
 		float: left;
+		z-index: 0;
 
 		.img-grid {
 			display: block;
@@ -160,6 +161,22 @@
 		width: 100%;
 		height: 200px;
 		line-height: 200px;
+
+		&.co-found-txt {
+			height: auto;
+			line-height: auto;
+
+			.box-texto {
+				padding: 150px 0;
+				background-color: rgba($verde, .7);
+
+				p.texto {
+					font-size: 1.9rem;
+					line-height: 2rem;
+					font-weight: $light;
+				}
+			}
+		}
 	}
 
 	.box-texto {

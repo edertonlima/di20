@@ -47,124 +47,108 @@
 
 		</div>
 
-		<ul class="ico-page">
-			<li>
-				<a href="#nos" title="">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico_page_nos.png" class="" alt="Nós"/>
-					<span>Nós</span>
-				</a>
-			</li>
-
-			<li>
-				<a href="#realizamos" title="">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico_page_realizamos.png" class="" alt="Realizamos"/>
-					<span>Realizamos</span>
-				</a>
-			</li>
-
-			<li>
-				<a href="#sonhos" title="">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico_page_sonhos.png" class="" alt="Sonhos"/>
-					<span>Sonhos</span>
-				</a>
-			</li>
-		</ul>
-
 	</div>
 </section>
 
-<section class="box-content no-padding">
-	<span id="nos" class="link_page_ancora"></span>
-
+<section class="box-content box-contato no-padding">
 	<h3 class="sub-tituto-page">
-		<div class="container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico_page_nos.png" class="" alt="Nós" /><span>Nós</span></div>
-	</h3>
-
-	<?php if(get_field('imagem_destaque_nos')){ ?>
-		<img src="<?php the_field('imagem_destaque_nos'); ?>" class="img-nos" />
-	<?php } ?>
-</section>
-
-<section class="box-content box-page-sobre sombra">
-	<div class="container">
-
-		<p class="sub-tituto text-content borda-efeito">
-			<?php the_field('texto_longo'); ?>
-		</p>
-
-		<?php if( have_rows('equipe') ):
-			while ( have_rows('equipe') ) : the_row(); ?>
-
-				<div class="equipe">
-					<?php if(get_sub_field('imagem')){ ?>
-						<img src="<?php the_sub_field('imagem'); ?>" class="" alt="<?php the_sub_field('titulo'); ?>"/>
-					<?php } ?>					
-
-					<?php if(get_sub_field('titulo')){ ?>
-						<h5><?php the_sub_field('titulo'); ?></h5>
-					<?php } ?>
-
-					<?php if(get_sub_field('funcao')){ ?>
-						<span><?php the_sub_field('funcao'); ?></span>
-					<?php } ?>
-
-					<?php if(get_sub_field('texto')){ ?>
-						<p><?php the_sub_field('texto'); ?></p>
-					<?php } ?>
-					
-				</div>
-
-			<?php endwhile;
-		endif; ?>	
-
-	</div>
-</section>
-
-<section class="box-content no-padding">
-	<span id="realizamos" class="link_page_ancora"></span>
-
-	<h3 class="sub-tituto-page margem">
-		<div class="container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico_page_realizamos.png" class="" alt="Realizamos" /><span>Realizamos</span></div>
+		<div class="container"><span>MANDE SUA MENSAGEM</span></div>
 	</h3>
 
 	<div class="container">
-		<p class="sub-tituto text-content-medium borda-efeito">
-			<?php the_field('texto_realizamos'); ?>
-		</p>
-	</div>
+		<div class="row">			
+			<div class="col-12">
 
-	<?php if( have_rows('ico_page_inferior') ): ?>
-		<ul class="ico-page ico-page-inferior">
-			<?php while ( have_rows('ico_page_inferior') ) : the_row(); ?>
+				<form action="javascript:" class="form-contato" method="post">
+					<fieldset>
+						<input type="text" name="nome" placeholder="NOME">
+						<input type="text" name="email" placeholder="E-MAIL">
+						<input type="text" name="telefone" placeholder="TELEFONE">
+						<textarea name="mensagem">MENSAGEM</textarea>
+					</fieldset>
+					<button type="button" class="enviar borda">ENVIAR</button>
+				</form>
 
-				<li>
-					<img src="<?php the_sub_field('icone'); ?>" class="" alt="<?php the_sub_field('titulo'); ?>"/>
-					<span><?php the_sub_field('titulo'); ?></span>
-				</li>
-
-			<?php endwhile; ?>
-		</ul>
-	<?php endif; ?>	
-</section>
-
-<section class="box-content box-sonhos no-padding">
-	<span id="sonhos" class="link_page_ancora"></span>
-
-	<h3 class="sub-tituto-page margem">
-		<div class="container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico_page_sonhos.png" class="" alt="Sonhos" /><span>Sonhos</span></div>
-	</h3>
-
-	<div class="container">
-		<div class="row">
-			
-			<div class="col-6">
-				<img src="<?php the_field('imagem-sonhos'); ?>" class="imagem-sonhos" alt="<?php the_field('titulo-sonhos'); ?>"/>
-			</div>
-			<div class="col-6">
-				<h5><?php the_field('titulo-sonhos'); ?></h5>
-				<p><?php the_field('texto-sonhos'); ?></p>
 			</div>
 		</div>
+
+		<div class="row row-contato">
+			<div class="col-4">
+				<div class="item-contato">
+					<span class="ico-nome">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico_cliente.png" class="ico_cliente" alt=""/>
+						<span class="nome-item">CLIENTE</span>
+					</span>
+					<h5><?php the_field('nome_clientes'); ?></h5>
+					<span class="sub-titulo"><?php the_field('sub_título_clientes'); ?></span>
+					<p>
+						<strong><?php the_field('email_clientes'); ?></strong>
+						<?php if( have_rows('telefones_clientes') ):
+							while ( have_rows('telefones_clientes') ) : the_row(); ?>
+
+								<span><?php the_sub_field('telefone'); ?></span>
+
+							<?php endwhile;
+						endif; ?>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-4">
+				<div class="item-contato">
+					<span class="ico-nome">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico_fornecedor.png" class="ico_fornecedor" alt=""/>
+						<span class="nome-item">FORNECEDOR</span>
+					</span>
+					<h5><?php the_field('nome_clientes'); ?></h5>
+					<span class="sub-titulo"><?php the_field('sub_título_fornecedor'); ?></span>
+					<p>
+						<strong><?php the_field('email_fornecedor'); ?></strong>
+						<?php if( have_rows('telefones_fornecedor') ):
+							while ( have_rows('telefones_fornecedor') ) : the_row(); ?>
+
+								<span><?php the_sub_field('telefone'); ?></span>
+
+							<?php endwhile;
+						endif; ?>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-4">
+				<div class="item-contato">
+					<span class="ico-nome">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico_trabalhe.png" class="" alt=""/>
+						<span class="nome-item trabalhe">TRABALHE<br>CONOSCO</span>
+					</span>
+					<h5><?php the_field('nome_clientes'); ?></h5>
+					<span class="sub-titulo"><?php the_field('sub_título_trabalhe'); ?></span>
+					<p>
+						<strong><?php the_field('email_trabalhe'); ?></strong>
+						<?php if( have_rows('telefones_trabalhe') ):
+							while ( have_rows('telefones_trabalhe') ) : the_row(); ?>
+
+								<span><?php the_sub_field('telefone'); ?></span>
+
+							<?php endwhile;
+						endif; ?>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="box-content box-contato contato-maps no-padding" style="background-image: url('<?php the_field('imagem_mapa','option'); ?>')">
+	<div class="bg-maps">
+		
+		<div class="box-endereco">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico_cafe.png" class="ico_cafe" alt=""/>
+			<h5>VENHA NOS ENCONTRAR</h5>
+			<p><?php the_field('endereco','option'); ?></p>
+			<a href="<?php the_field('google_maps','option'); ?>" title="GOOGLE MAPS" target="_blank">GOOGLE MAPS</a>
+		</div>
+
 	</div>
 </section>
 

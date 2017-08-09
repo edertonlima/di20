@@ -174,6 +174,12 @@
 					</li>
 
 					<li class="">
+						<a href="<?php echo get_home_url(); ?>/projetos" title="PROJETOS">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico_projetos.png" alt="PROJETOS">PROJETOS
+						</a>
+					</li>
+
+					<li class="">
 						<a href="<?php echo get_permalink(get_page_by_path('co-found')); ?>" title="CO-FOUND">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico_cofound.png" alt="CO-FOUND">CO-FOUND
 						</a>

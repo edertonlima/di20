@@ -1,0 +1,60 @@
+.post-list {
+	margin-top: 30px;
+
+	.imagem_principal {
+		overflow: hidden;
+		width: 100%;
+		display: block;
+		background-color: $verde;
+
+		img {
+			width: 100%;
+			display: block;
+			@include animacao;
+		}
+	}
+
+	.box-content {
+		text-align: center;
+		padding: 40px 0 20px;
+		display: block;
+
+		.ico_list {
+			max-width: 80px;
+		}
+
+		h5 {
+			margin: 10px 0;
+			@include animacao;
+		}
+
+		.date, p {
+			font-weight: $light;
+			display: block;
+		}
+
+		.date {
+			font-size: 1.225rem;
+			line-height: 1.225rem;
+			margin-bottom: 20px;
+		}
+
+		p {
+			font-size: 1.5rem;
+			line-height: 1.5rem;
+		}
+	}
+
+	&:hover {
+		.imagem_principal {
+			img {
+				opacity: .5;
+				@include scale-rotate();
+			}
+		}
+
+		h5 {
+			color: #000000;
+		}
+	}
+}
