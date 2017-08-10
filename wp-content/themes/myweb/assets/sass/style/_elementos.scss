@@ -142,6 +142,10 @@ h3 {
 		&.margem {
 			margin: 50px 0;
 		}
+
+		&.center {
+			text-align: center;
+		}
 	}
 }
 
@@ -255,5 +259,44 @@ a {
 
 	&:hover {
 		text-decoration: none;		
+	}
+}
+
+.paginacao {
+margin: 50px auto 0;
+text-align: center;
+
+	li {
+		display: inline-block;
+		margin: 0px;
+
+		span, a {
+			display: block;
+			font-size: 1.225rem;
+			font-weight: $regular;
+			line-height: 40px;
+			height: 40px;
+			padding: 0 10px;
+		}
+
+		a {
+			color: $verde;
+			@include animacao;
+
+			.fa {
+				font-size: 1.225rem;
+				font-weight: $regular;
+				color: $verde;
+			}
+
+			&:hover {
+				background-color: rgba($verde, .5);
+			}
+		}
+
+		span {
+			background-color: $verde;
+			color: #ffffff;
+		}
 	}
 }

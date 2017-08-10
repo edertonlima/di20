@@ -90,6 +90,10 @@ body * {
 		padding: 0;
 	}
 
+	&.no-padding-bottom {
+		padding-bottom: 0;
+	}
+
 	&.sombra {
 		background: url('../images/bg_sombra.png') repeat-x top left;
 	}

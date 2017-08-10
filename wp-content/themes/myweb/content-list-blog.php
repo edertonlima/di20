@@ -2,10 +2,10 @@
 	<?php 
 
 		$args = array(
-		    'hide_empty' => 1,    
-		    'exclude'    =>array(1) //(1,2,3)
+		    'hide_empty' => 1
+		    //'exclude'    =>array(1) //(1,2,3)
 		); 
-		$categories = get_categories($args);
+		$categories = get_categories($args); var_dump($categories);
 
 		$imagem = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '' ); 
 		if($imagem[0]){ ?>

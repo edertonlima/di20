@@ -2,7 +2,7 @@
 
 	<?php while ( have_posts() ) : the_post();
 
-		get_template_part( 'content-produtos', get_post_format() ); ?>
+		get_template_part( 'content-projetos', get_post_format() ); ?>
 
 	<?php endwhile; ?>
 

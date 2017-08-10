@@ -128,13 +128,12 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'Geral',
 		'parent_slug'	=> 'configuracoes-geral',
 	));
-/*
+
 	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Produtos',
-		'menu_title'	=> 'Produtos',
+		'page_title' 	=> 'Projetos',
+		'menu_title'	=> 'Projetos',
 		'parent_slug'	=> 'configuracoes-geral',
 	));
-*/
 }
 
 /* PAGINAÇÃO */
@@ -161,7 +160,6 @@ function paginacao() {
            echo '</ul>';
         }
 }
-
 
 // NOVOS POST TYPES 
 // PRODUTOS
