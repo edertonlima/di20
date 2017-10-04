@@ -49,6 +49,16 @@
 .box-sonhos {
 	.row .col-6 {
 		padding: 0 40px;
+
+		@media all and (max-width: 750px){
+			width: 100%;
+
+			.imagem-sonhos {
+				display: block;
+				margin: 0 auto 30px;
+				max-width: 75%;
+			}
+		}
 	}
 
 	.imagem-sonhos, h5 {

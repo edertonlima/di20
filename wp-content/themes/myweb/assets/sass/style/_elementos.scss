@@ -146,6 +146,19 @@ h3 {
 		&.center {
 			text-align: center;
 		}
+
+		@media all and (max-width: 750px){
+			img {
+				max-height: 50px;
+				margin-top: 15px;
+				margin-left: 0px;
+			}
+
+			span {
+				font-size: 1.5rem;
+				margin-left: 10px;
+			}
+		}
 	}
 }
 
@@ -164,6 +177,11 @@ h5 {
 	text-transform: uppercase;
 	font-weight: $regular;
 	color: $verde;
+
+	@media all and (max-width: 500px){
+		font-size: 1.5rem;
+		line-height: 1.5rem;
+	}
 }
 
 h6 {

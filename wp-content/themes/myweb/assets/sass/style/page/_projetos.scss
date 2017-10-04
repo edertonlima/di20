@@ -57,4 +57,16 @@
 			line-height: 1.225rem;
 		}
 	}
+
+	@media all and (max-width: 1000px){
+		padding: 0 10px;
+
+		img {
+			left: 5px;
+		}
+	}
+
+	@media all and (max-width: 500px){
+		width: 100%;
+	}
 }

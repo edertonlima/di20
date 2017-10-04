@@ -12,6 +12,10 @@
 		width: 50%;
 		padding: 0px;
 		@include box-sizing; 
+
+		@media all and (max-width: 500px){
+			width: 100%;
+		}
 	}
 
 	.grid-item {
@@ -142,6 +146,16 @@
 				display: none;
 			}
 		}
+
+		@media all and (max-width: 750px){
+			display: block;
+			padding: 0;
+			margin-bottom: 60px;
+
+			&:before, &:after {
+				display: none;
+			}
+		}
 	}
 
 	&.ico-page-inferior {
@@ -215,6 +229,10 @@
 		display: block;
 		width: 130px;
 		margin: 0 auto 10px;
+
+		@media all and (max-width: 500px){
+			width: 80px;
+		}
 	}
 
 	.button {
