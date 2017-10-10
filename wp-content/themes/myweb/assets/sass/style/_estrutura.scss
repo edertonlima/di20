@@ -106,6 +106,12 @@ body * {
 		padding-bottom: 60px;
 	}
 
+	&.box-content-blog {
+		.container {
+			max-width: 1200px;
+		}
+	}
+
 	.link_page_ancora {
 		position: relative;
 		top: -80px;

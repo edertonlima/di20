@@ -64,7 +64,7 @@
 						<input type="text" name="nome" placeholder="NOME">
 						<input type="text" name="email" placeholder="E-MAIL">
 						<input type="text" name="telefone" placeholder="TELEFONE">
-						<textarea name="mensagem">MENSAGEM</textarea>
+						<textarea name="mensagem" placeholder="MENSAGEM"></textarea>
 					</fieldset>
 					<button type="button" class="enviar borda">ENVIAR</button>
 				</form>

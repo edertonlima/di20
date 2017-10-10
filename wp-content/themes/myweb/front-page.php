@@ -53,7 +53,7 @@
 	</a>
 </section>
 
-<section class="box-content">
+<section class="box-content box-content-blog">
 	<span id="continue_sonhando" class="link_page_ancora"></span>
 	<div class="container">
 
