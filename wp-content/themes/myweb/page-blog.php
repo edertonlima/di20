@@ -87,15 +87,22 @@
 		</p>
 	</div>
 
-	<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-	$args = array( 'post_type' => 'post', 'posts_per_page' => 20, 'paged' => $paged );
-	$wp_query = new WP_Query($args);
+	<div class="container">
+		<div class="row">
 
-	while ( have_posts() ) : the_post();
+			<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+			$args = array( 'post_type' => 'post', 'posts_per_page' => 20, 'paged' => $paged );
+			$wp_query = new WP_Query($args);
 
-		get_template_part( 'content-list-blog', get_post_format() );
+			while ( have_posts() ) : the_post();
 
-	endwhile; ?>
+				get_template_part( 'content-list-blog', get_post_format() );
+				get_template_part( 'content-list-blog', get_post_format() );
+
+			endwhile; ?>
+
+		</div>
+	</div>
 
 </section>
 

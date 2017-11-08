@@ -9,24 +9,24 @@
 
 			<div class="carousel-inner" role="listbox">
 
-				<?php if( have_rows('slide',$category->taxonomy.'_'.$category->term_id) ):
+				<?php if( have_rows('slide') ):
 					$slide = 0;
-					while ( have_rows('slide',$category->taxonomy.'_'.$category->term_id) ) : the_row();
+					while ( have_rows('slide') ) : the_row();
 
-						if(get_sub_field('imagem',$category->taxonomy.'_'.$category->term_id)){
+						if(get_sub_field('imagem')){
 							$slide = $slide+1; ?>
 
-							<div class="item <?php if($slide == 1){ echo 'active'; } ?>" style="background-image: url('<?php the_sub_field('imagem',$category->taxonomy.'_'.$category->term_id); ?>');">
+							<div class="item <?php if($slide == 1){ echo 'active'; } ?>" style="background-image: url('<?php the_sub_field('imagem'); ?>');">
 
 								<div class="box-height">
 									<div class="box-texto">
 										
-										<img src="<?php the_field('ico_listagem',$category->taxonomy.'_'.$category->term_id); ?>" alt="<?php echo $category->name; ?>" />
-										<h2 class="title_page"><?php echo $category->name; ?></h2>
+										<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico_blog_blog.png" alt="Blog" />
+										<h2 class="title_page">Blog</h2>
 
-										<p class="texto"><?php the_sub_field('texto',$category->taxonomy.'_'.$category->term_id); ?></p>
-										<?php if(get_sub_field('sub_texto',$category->taxonomy.'_'.$category->term_id)){ ?>
-											<p class="sub-texto"><?php the_sub_field('sub_texto',$category->taxonomy.'_'.$category->term_id); ?></p>
+										<p class="texto"><?php the_sub_field('texto'); ?></p>
+										<?php if(get_sub_field('sub_texto')){ ?>
+											<p class="sub-texto"><?php the_sub_field('sub_texto'); ?></p>
 										<?php } ?>
 
 									</div>
@@ -83,23 +83,27 @@
 <section class="box-content sombra">
 	<div class="container">
 		<p class="sub-tituto text-content-medium borda-efeito">
-			<?php echo $category->description; ?>
+			<?php the_field('descricao_listagem_blog'); ?>
 		</p>
 	</div>
 
-	<?php
-		/*if($category->term_id == 1){ */
-			while ( have_posts() ) : the_post();
-				get_template_part( 'content-list-blog', get_post_format() );
-			endwhile;
-		/*}else{
-			while ( have_posts() ) : the_post();
-				get_template_part( 'content-list', get_post_format() );
-			endwhile;
-		}*/
-	?>
+	<div class="container">
+		<div class="row">
 
-	<?php paginacao(); ?>
+			<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+			$args = array( 'post_type' => 'post', 'posts_per_page' => 20, 'paged' => $paged );
+			$wp_query = new WP_Query($args);
+
+			while ( have_posts() ) : the_post();
+
+				get_template_part( 'content-list-blog', get_post_format() );
+				get_template_part( 'content-list-blog', get_post_format() );
+
+			endwhile; ?>
+
+		</div>
+	</div>
+
 </section>
 
 <?php get_footer(); ?>

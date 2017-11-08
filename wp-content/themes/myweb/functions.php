@@ -233,97 +233,13 @@ function create_taxonomy_categoria_projeto() {
 }
 
 
-
-
-
-/*
-
-
-
-
-
-	// matriz e filiais
-	add_action('init', 'type_post_matriz_filiais');
-	function type_post_matriz_filiais() {
-		$labels = array(
-			'name' => _x('Matriz e Filiais', 'post type general name'),
-			'singular_name' => _x('Matriz e Filiais', 'post type singular name'),
-			'add_new' => _x('Adicionar Novo', 'Novo item'),
-			'add_new_item' => __('Novo Item'),
-			'edit_item' => __('Editar Item'),
-			'new_item' => __('Novo Item'),
-			'view_item' => __('Ver Item'),
-			'search_items' => __('Procurar Itens'),
-			'not_found' => __('Nenhum registro encontrado'),
-			'not_found_in_trash' => __('Nenhum registro encontrado na lixeira'),
-			'parent_item_colon' => '',
-			'menu_name' => 'Matriz e Filiais'
-		);
-
-		$args = array(
-			'labels' => $labels,
-			'public' => true,
-			'public_queryable' => true,
-			'show_ui' => true,
-			'query_var' => true,
-			'rewrite' => true,
-			'capability_type' => 'post',
-			'has_archive' => true,
-			'hierarchical' => false,
-			'menu_icon' => 'dashicons-admin-multisite',
-			'supports' => array('title', 'thumbnail')
-		);
-
-		register_post_type( 'matriz_filiais' , $args );
-		flush_rewrite_rules();
-	}
-
-
-	// lojas
-	add_action('init', 'type_post_lojas');
-	function type_post_lojas() {
-		$labels = array(
-			'name' => _x('Lojas', 'post type general name'),
-			'singular_name' => _x('Lojas', 'post type singular name'),
-			'add_new' => _x('Adicionar Novo', 'Novo item'),
-			'add_new_item' => __('Novo Item'),
-			'edit_item' => __('Editar Item'),
-			'new_item' => __('Novo Item'),
-			'view_item' => __('Ver Item'),
-			'search_items' => __('Procurar Itens'),
-			'not_found' => __('Nenhum registro encontrado'),
-			'not_found_in_trash' => __('Nenhum registro encontrado na lixeira'),
-			'parent_item_colon' => '',
-			'menu_name' => 'Lojas'
-		);
-
-		$args = array(
-			'labels' => $labels,
-			'public' => true,
-			'public_queryable' => true,
-			'show_ui' => true,
-			'query_var' => true,
-			'rewrite' => true,
-			'capability_type' => 'post',
-			'has_archive' => true,
-			'hierarchical' => false,
-			'menu_icon' => 'dashicons-store',
-			'supports' => array('title')
-		);
-
-		register_post_type( 'lojas' , $args );
-		flush_rewrite_rules();
-	}
-
-*/
-
-$producao = false;
+$producao = true;
 if($producao){
 	add_action('admin_head', 'my_custom_fonts');
 
 	function my_custom_fonts() {
-	  echo '<style> /*
-		#menu-media, #menu-comments, #menu-appearance, #menu-plugins, #menu-tools, #menu-settings, #toplevel_page_edit-post_type-acf, #toplevel_page_edit-post_type-acf-field-group, 
+	  echo '<style>
+		#menu-media, #menu-comments, /*#menu-appearance, #menu-plugins, */#menu-tools, #menu-settings, #toplevel_page_edit-post_type-acf, #toplevel_page_edit-post_type-acf-field-group, 
 		#toplevel_page_zilla-likes, 
 		#screen-options-link-wrap, 
 		.acf-postbox h2 a, 
@@ -333,10 +249,13 @@ if($producao){
 		#commentsdiv, 
 		#toplevel_page_wpglobus_options, 
 		.taxonomy-category .form-field.term-parent-wrap, 
-		.wp-menu-separator 
+		.wp-menu-separator, 
+		#menu-appearance li:nth-child(1), 
+		#menu-appearance li:nth-child(2), 
+		#menu-appearance li:nth-child(3) 
 		{
 			display: none!important;
-		} */
+		}
 	  </style>';
 
 	  echo '
@@ -346,8 +265,8 @@ if($producao){
 			jQuery("document").ready(function(){
 				jQuery("#menu-media").remove();
 				jQuery("#menu-comments").remove();
-				jQuery("#menu-appearance").remove();
-				jQuery("#menu-plugins").remove();
+				/*jQuery("#menu-appearance").remove();
+				jQuery("#menu-plugins").remove();*/
 				jQuery("#menu-tools").remove();
 				jQuery("#menu-settings").remove();
 				jQuery("#toplevel_page_edit-post_type-acf").remove();
@@ -373,6 +292,10 @@ if($producao){
 				jQuery("#toplevel_page_delete_all_posts .wp-menu-name").html("Apagar Lojas");
 				jQuery("#toplevel_page_delete_all_posts .wp-first-item .wp-first-item").html("Apagar Todas");
 				jQuery("#toplevel_page_delete_all_posts ul").remove();
+
+				jQuery("#menu-appearance li:nth-child(1)").remove();
+				//jQuery("#menu-appearance li:nth-child(2)").remove();
+				//jQuery("#menu-appearance li:nth-child(3)").remove();
 			});
 		</script>
 	  ';

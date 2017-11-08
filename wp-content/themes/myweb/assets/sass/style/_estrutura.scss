@@ -72,6 +72,10 @@ body * {
 			margin-left: $i*(100%/12);
 		}
 	}
+
+	.col-4:nth-child(3n+1) {
+		@include clear;
+	}
 }
 
 .box-content {
