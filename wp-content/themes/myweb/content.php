@@ -66,7 +66,7 @@
 	<img src="<?php the_field('imagem'); ?>" class="img-destaque" alt=""/>
 <?php } ?>
 
-<section class="box-content box-sobre sombra no-padding-bottom">
+<section class="box-content box-sobre sombra">
 	<div class="container">
 
 		<div class="content-post">
@@ -76,10 +76,17 @@
 			<?php the_field('texto_adicional'); ?>
 		</div>
 
+		<?php /*
 		<div class="autor">
 			<span class="ico"></span>
 			<span class="nome-data"><span class="nome"><?php echo get_the_author(); ?></span>&nbsp;&nbsp;|&nbsp;&nbsp;<?php the_date(); ?></span>
 		</div>
+		*/?>
+	</div>
+</section>
+
+<section class="box-content box-sobre sombra no-padding">
+	<div class="container">
 
 		<h5 class="veja-mais">VEJA MAIS NOTÍCIAS <br> RELACIONADAS</h5>
 
@@ -137,7 +144,7 @@
 </section>
 
 <script type="text/javascript">
-	jQuery(document).ready(function(){
+	jQuery(window).load(function(){
 
 		jQuery('.grid-item').each(function(){
 			jQuery('.hover-grid',this).height(jQuery(this).height());

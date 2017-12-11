@@ -140,15 +140,50 @@
 		font-weight: $light;
 		margin-bottom: 20px;
 
+		strong, b {
+			color: $verde;
+			font-weight: $light;
+		}
+
 		&:last-child {
 			margin-bottom: 0px;
+		}
+	}
+
+	h2, h3, h4, h5 {
+		color: $verde;
+		text-align: left;
+		margin-bottom: 5px;
+		margin-top: 40px;
+		display: block;
+		text-transform: none;
+	}
+
+	ul, ol {
+		margin: 40px 0;
+		display: block;
+		width: 100%;
+
+		li {
+			display: block;
+			width: 100%;
+			text-align: left;
+			font-size: 1.125rem;
+			line-height: 1.5rem;
+			font-weight: $light;
+			margin-bottom: 15px;
+
+			strong, b {
+				color: $verde;
+				font-weight: $light;
+			}
 		}
 	}
 
 	blockquote {
 		margin: 40px 0;
 
-		p {
+		p, strong, b {
 			font-size: 1.875rem;
 			line-height: 2rem;
 			color: $verde;

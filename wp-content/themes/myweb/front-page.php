@@ -197,11 +197,13 @@
 				jQuery('.enviar').html('CADASTRAR').prop( "disabled", false );
 			}
 		});
+		
+	});
 
+	jQuery(window).load(function(){
 		jQuery('.grid-item').each(function(){
 			jQuery('.hover-grid',this).height(jQuery(this).height());
 		});
-
 	});
 
 	jQuery(window).resize(function(){
