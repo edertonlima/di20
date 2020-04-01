@@ -96,7 +96,7 @@
 
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'content-list-blog', get_post_format() );
+				//get_template_part( 'content-list-blog', get_post_format() );
 				get_template_part( 'content-list-blog', get_post_format() );
 
 			endwhile; ?>
